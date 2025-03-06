@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import * as React from "react";
 import { toast } from "sonner";
@@ -6,7 +6,6 @@ import type { ReactNode } from "react";
 
 // Maximum number of toasts
 const TOAST_LIMIT = 3;
-const TOAST_REMOVE_DELAY = 4000; // 4 seconds
 
 // Define Toast Types
 type ToastType = "success" | "error" | "info" | "warning";
@@ -32,29 +31,13 @@ interface State {
   toasts: ToastProps[];
 }
 
-// Reducer Function
-const toastReducer = (state: State, action: Action): State => {
-  switch (action.type) {
-    case "ADD_TOAST":
-      return {
-        toasts: [action.toast, ...state.toasts].slice(0, TOAST_LIMIT),
-      };
-
-    case "REMOVE_TOAST":
-      return {
-        toasts: state.toasts.filter((t) => t.id !== action.toastId),
-      };
-
-    default:
-      return state;
-  }
-};
-
 type ToastContextType = {
   toast: (props: ToastProps) => void;
 };
 
-const ToastContext = React.createContext<ToastContextType | undefined>(undefined);
+const ToastContext = React.createContext<ToastContextType | undefined>(
+  undefined
+);
 
 // Provider Component
 export function ToastProvider(props: { children: ReactNode }) {
