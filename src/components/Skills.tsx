@@ -1,7 +1,7 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import {
-  Code,
+    
   Cpu,
   Database,
   Globe,

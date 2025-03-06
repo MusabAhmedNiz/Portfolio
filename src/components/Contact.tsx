@@ -15,7 +15,7 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Mail, MessageSquare } from "lucide-react";
+import {  MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 
