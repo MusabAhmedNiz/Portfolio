@@ -4,8 +4,6 @@ import * as React from "react";
 import { toast } from "sonner";
 import type { ReactNode } from "react";
 
-// Maximum number of toasts
-const TOAST_LIMIT = 3;
 
 // Define Toast Types
 type ToastType = "success" | "error" | "info" | "warning";
