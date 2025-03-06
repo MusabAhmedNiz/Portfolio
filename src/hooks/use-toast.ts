@@ -22,15 +22,6 @@ type ToastProps = {
   };
 };
 
-// Define State & Actions
-type Action =
-  | { type: "ADD_TOAST"; toast: ToastProps }
-  | { type: "REMOVE_TOAST"; toastId: string };
-
-interface State {
-  toasts: ToastProps[];
-}
-
 type ToastContextType = {
   toast: (props: ToastProps) => void;
 };
