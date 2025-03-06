@@ -71,7 +71,7 @@ export function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            Here are some of the projects I've worked on. Each project
+            Here are some of the projects I&apos;ve worked on. Each project
             represents a unique challenge and solution, showcasing my skills as
             a full stack developer.
           </motion.p>

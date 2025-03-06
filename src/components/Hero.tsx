@@ -56,7 +56,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              I'm Musab Nizamani, a full stack developer specializing in
+              I&apos;m Musab Nizamani, a full stack developer specializing in
               building exceptional digital experiences with JavaScript, React,
               Next.js, and Python.
             </motion.p>

@@ -99,10 +99,10 @@ export function Contact() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-medium mb-4">
-                  Let's work together
+                  Let&apos;s work together
                 </h3>
                 <p className="text-foreground/70 mb-6">
-                  I'm currently open to work, whether it's freelancing or a job
+                  I&apos;m currently open to work, whether it&apos;s freelancing or a job
                   opportunity. If you have a project to discuss or need my help
                   with something, feel free to reach out.{" "}
                 </p>

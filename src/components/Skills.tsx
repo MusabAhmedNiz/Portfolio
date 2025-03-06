@@ -109,8 +109,8 @@ export function Skills() {
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            I've worked with a wide range of technologies in the web development
-            world. Here's a comprehensive overview of my technical skills and
+            I&apos;ve worked with a wide range of technologies in the web development
+            world. Here&apos;s a comprehensive overview of my technical skills and
             areas of expertise.
           </motion.p>
         </div>
@@ -174,7 +174,7 @@ export function Skills() {
             Always Expanding My Skill Set
           </h3>
           <p className="text-foreground/70 max-w-2xl mx-auto">
-            The tech landscape is always evolving, and so am I. I'm constantly
+            The tech landscape is always evolving, and so am I. I&apos;m constantly
             learning new technologies and frameworks to stay ahead of the curve.
           </p>
         </motion.div>

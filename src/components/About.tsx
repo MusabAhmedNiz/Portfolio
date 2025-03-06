@@ -21,7 +21,7 @@ export function About() {
     "TailwindCSS",
     "Framer Motion",
     "Jest",
-    "Shad-cn"
+    "Shad-cn",
   ];
 
   return (
@@ -48,16 +48,16 @@ export function About() {
               solutions
             </h2>
             <p className="text-foreground/70 mb-6">
-              I'm a dedicated full stack developer with expertise in JavaScript,
-              React.js, Next.js, and Python. My journey in development is driven
-              by a passion for building efficient, user-friendly applications
-              that solve real-world problems.
+              I&apos;m a dedicated full stack developer with expertise in
+              JavaScript, React.js, Next.js, and Python. My journey in
+              development is driven by a passion for building efficient,
+              user-friendly applications that solve real-world problems.
             </p>
             <p className="text-foreground/70 mb-8">
               With a strong foundation in both frontend and backend
               technologies, I enjoy taking projects from concept to completion.
-              I'm constantly learning and adapting to new technologies to stay
-              at the forefront of web development.
+              I&apos;m constantly learning and adapting to new technologies to
+              stay at the forefront of web development.
             </p>
 
             <div className="space-y-3">
