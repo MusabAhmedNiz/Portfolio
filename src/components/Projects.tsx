@@ -21,6 +21,7 @@ export function Projects() {
         "Node.js",
         "Python",
         "Auth.js",
+        "Resend",
         "Firebase",
         "MongoDB",
         "Framer Motion",

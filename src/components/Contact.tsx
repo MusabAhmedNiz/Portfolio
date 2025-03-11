@@ -15,9 +15,10 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import {  MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -39,19 +40,31 @@ export function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values);
-      setIsSubmitting(false);
-      form.reset();
-
-      toast.success("Message sent!", {
-        description: "Thank you for your message. I'll get back to you soon.",
+  
+    try {
+      const response = await axios.post("/api/contact", values);
+  
+      if (response.data.success) {
+        toast.success("Message sent!", {
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+  
+        form.reset();
+      } else {
+        toast.error("Failed to send message.", {
+          description: "Please try again later.",
+        });
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error("Something went wrong.", {
+        description: "Could not send the message.",
       });
-    }, 1500);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -102,9 +115,9 @@ export function Contact() {
                   Let&apos;s work together
                 </h3>
                 <p className="text-foreground/70 mb-6">
-                  I&apos;m currently open to work, whether it&apos;s freelancing or a job
-                  opportunity. If you have a project to discuss or need my help
-                  with something, feel free to reach out.{" "}
+                  I&apos;m currently open to work, whether it&apos;s freelancing
+                  or a job opportunity. If you have a project to discuss or need
+                  my help with something, feel free to reach out.{" "}
                 </p>
 
                 <div className="space-y-4">
