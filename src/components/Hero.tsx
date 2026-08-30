@@ -2,7 +2,7 @@ export function Hero() {
   return (
     <section className="mt-8 md:mt-12">
       <h1 className="font-rubik text-headline-xl text-on-surface font-bold tracking-tight mb-4">
-        DevName
+        MusabNiz
       </h1>
       <p className="font-rubik text-headline-lg-mobile md:text-headline-lg text-primary font-semibold tracking-tight mb-6">
         Full Stack Developer

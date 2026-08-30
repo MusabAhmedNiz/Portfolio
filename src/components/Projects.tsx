@@ -10,32 +10,34 @@ export function Projects() {
         {projects.map((project, index) => (
           <div key={project.title} className="flex flex-col gap-6">
             <div className="group flex flex-col gap-2">
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                 <a
                   href={project.liveUrl || project.repoUrl || "#"}
                   className="font-inter text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors duration-200"
                 >
                   {project.title}
                 </a>
-                <div className="flex gap-4 font-inter text-body-sm text-on-surface-variant mt-2 sm:mt-0">
+                <div className="flex items-center gap-4 font-inter text-body-sm text-on-surface-variant mt-2 sm:mt-0">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
-                      className="hover:text-primary transition-colors duration-200"
+                      className="inline-flex items-center gap-1 hover:text-primary transition-colors duration-200"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Live ↗
+                      <span>Live</span>
+                      <span className="text-xs leading-none">↗</span>
                     </a>
                   )}
                   {project.repoUrl && (
                     <a
                       href={project.repoUrl}
-                      className="hover:text-primary transition-colors duration-200"
+                      className="inline-flex items-center gap-1 hover:text-primary transition-colors duration-200"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Repo ↗
+                      <span>Repo</span>
+                      <span className="text-xs leading-none">↗</span>
                     </a>
                   )}
                 </div>

@@ -8,7 +8,7 @@ export function Navbar() {
           href="/"
           className="font-rubik text-headline-lg text-on-surface font-semibold tracking-tight hover:opacity-90 transition-opacity"
         >
-          DevName
+          MusabNiz
         </Link>
         <ul className="flex items-center gap-8">
           <li>
@@ -29,7 +29,7 @@ export function Navbar() {
           </li>
           <li>
             <a
-              href="https://github.com"
+              href="https://github.com/MusabAhmedNiz"
               target="_blank"
               rel="noopener noreferrer"
               className="font-inter text-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200"

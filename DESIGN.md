@@ -81,10 +81,10 @@ The layout adheres to a **Fixed Centered Column** system that ensures readable l
 
 ### 1. Navigation Bar (`Navbar.tsx`)
 - **Position**: `fixed top-0 w-full z-50` with `backdrop-blur-xl bg-[#60a5fa]/[0.02] border-b border-[#1e293b]/50`
-- **Content**: Left brand name (`DevName`), right text links (`Projects`, `Blog`, `GitHub`, `X`) with smooth color transitions to `#60a5fa` on hover.
+- **Content**: Left brand name (`MusabNiz`), right text links (`Projects`, `Blog`, `GitHub`, `X`) with smooth color transitions to `#60a5fa` on hover.
 
 ### 2. Hero Section (`Hero.tsx`)
-- **Content**: Large Rubik heading (`DevName`), subtitle in primary accent (`Full Stack Developer`), and concise multi-sentence technical summary in `body-md` (`#cbc4d2`).
+- **Content**: Large Rubik heading (`MusabNiz`), subtitle in primary accent (`Full Stack Developer`), and concise multi-sentence technical summary in `body-md` (`#cbc4d2`).
 
 ### 3. Currently Section (`Currently.tsx`)
 - **Header**: Uppercase label with an active pulsing blue status dot (`CURRENTLY`).
@@ -99,4 +99,4 @@ The layout adheres to a **Fixed Centered Column** system that ensures readable l
 - **Columns**: 3-column responsive grid (`Frontend`, `Backend`, `Tools`) with uppercase category labels (`label-caps`) and vertically stacked technology items.
 
 ### 6. Footer (`Footer.tsx`)
-- **Position**: Full-width footer with top border (`border-[#1e293b]/50`), containing copyright note (`© 2024 DevName`) on the left and text links (`GitHub`, `X`, `Email`) on the right.
+- **Position**: Full-width footer with top border (`border-[#1e293b]/50`), containing dynamic copyright note (`© {currentYear} MusabNiz`) on the left and text links (`GitHub`, `LinkedIn`, `X`, `Email`) on the right.
