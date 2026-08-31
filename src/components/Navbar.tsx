@@ -21,10 +21,10 @@ export function Navbar() {
           </li>
           <li>
             <a
-              href="#blog"
+              href="#currently"
               className="font-inter text-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200"
             >
-              Blog
+              Currently
             </a>
           </li>
           <li>
@@ -35,16 +35,6 @@ export function Navbar() {
               className="font-inter text-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200"
             >
               GitHub
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-inter text-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200"
-            >
-              X
             </a>
           </li>
         </ul>

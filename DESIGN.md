@@ -1,6 +1,6 @@
 # Design Specification: Minimalist Developer Portfolio
 
-Documented from the Google Stitch design system and screen specification for **Refined Dev Homepage** (`projects/2624173836717526022/screens/91516003688947668b1d4abe707f6c66`).
+Design tokens and component spec for the portfolio's dark, typography-first homepage.
 
 ---
 

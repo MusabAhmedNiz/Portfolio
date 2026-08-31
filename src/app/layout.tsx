@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "MusabNiz - Full Stack Developer",
   description:
-    "Portfolio of a Full Stack Developer building modern, resilient web applications with a focus on performance and user experience.",
+    "Portfolio of Musab — full-stack developer building web apps with Next.js, React, and TypeScript. Auth, payments, file uploads, and a homelab on the side.",
 };
 
 export default function RootLayout({

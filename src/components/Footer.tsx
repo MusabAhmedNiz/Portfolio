@@ -20,27 +20,7 @@ export function Footer() {
           </li>
           <li>
             <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-inter text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
-            >
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-inter text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
-            >
-              X
-            </a>
-          </li>
-          <li>
-            <a
-              href="mailto:hello@example.com"
+              href="mailto:khalilnizamani@gmail.com"
               className="font-inter text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
             >
               Email

@@ -6,14 +6,14 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
-    skills: ["React / Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    skills: ["Next.js", "React", "TypeScript", "TanStack Form"],
   },
   {
     title: "Backend",
-    skills: ["Node.js / Express", "Go", "PostgreSQL", "Redis"],
+    skills: ["Prisma", "Better Auth", "Polar / Stripe", "RBAC"],
   },
   {
-    title: "Tools",
-    skills: ["Docker / Kubernetes", "AWS / GCP", "Git / GitHub Actions", "Linux / Bash"],
+    title: "Tooling",
+    skills: ["S3 / ImageKit", "Vercel", "pnpm", "Docker", "Linux"],
   },
 ];

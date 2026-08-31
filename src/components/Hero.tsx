@@ -8,10 +8,11 @@ export function Hero() {
         Full Stack Developer
       </p>
       <p className="font-inter text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
-        I build modern, resilient web applications with a focus on performance
-        and user experience. Currently diving deep into distributed systems and
-        exploring new paradigms in backend architectures. I believe in simple,
-        maintainable code over complex abstractions.
+        I build full-stack web applications with Next.js, React, and
+        TypeScript — auth flows, payments, file uploads, and all the unglamorous
+        glue in between. When I&apos;m not shipping web apps, I&apos;m
+        daily-driving Omarchy and tinkering with my homelab. I care about
+        simple, maintainable code over clever abstractions.
       </p>
     </section>
   );
