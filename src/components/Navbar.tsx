@@ -50,32 +50,45 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile Menu Toggle Button with animated div icon */}
+        {/* <!-- Hamburger Toggle BTN --> */}
         <button
-          type="button"
+          aria-label="hamburger Toggler"
+          className="block md:hidden p-1 -mr-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 -mr-2 text-on-surface-variant hover:text-on-surface focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg transition-colors flex items-center justify-center"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
         >
-          <div className="w-5 h-4 relative flex flex-col justify-between" aria-hidden="true">
-            <div
-              className={`w-full h-[1.5px] bg-current rounded-full transition-all duration-300 ease-in-out origin-center ${
-                isOpen ? "translate-y-[7.25px] rotate-45" : "translate-y-0 rotate-0"
-              }`}
-            />
-            <div
-              className={`w-full h-[1.5px] bg-current rounded-full transition-all duration-200 ease-in-out ${
-                isOpen ? "opacity-0 scale-x-0" : "opacity-100 scale-x-100"
-              }`}
-            />
-            <div
-              className={`w-full h-[1.5px] bg-current rounded-full transition-all duration-300 ease-in-out origin-center ${
-                isOpen ? "-translate-y-[7.25px] -rotate-45" : "translate-y-0 rotate-0"
-              }`}
-            />
-          </div>
+          <span className="relative block h-5 w-5 cursor-pointer">
+            <span className="absolute block h-full w-full">
+              <span
+                className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-white delay-[0] duration-200 ease-in-out ${
+                  !isOpen ? "!w-full delay-300" : ""
+                }`}
+              ></span>
+              <span
+                className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-white delay-150 duration-200 ease-in-out ${
+                  !isOpen ? "delay-400 !w-full" : ""
+                }`}
+              ></span>
+              <span
+                className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-white delay-200 duration-200 ease-in-out ${
+                  !isOpen ? "!w-full delay-500" : ""
+                }`}
+              ></span>
+            </span>
+            <span className="absolute block h-full w-full rotate-45">
+              <span
+                className={`absolute left-2.5 top-0 block h-0 w-0.5 rounded-sm bg-white delay-300 duration-200 ease-in-out ${
+                  isOpen ? "h-full delay-[0]" : ""
+                }`}
+              ></span>
+              <span
+                className={`delay-400 absolute left-[1px] top-[9px] block h-0 w-full rounded-sm bg-white duration-200 ease-in-out ${
+                  isOpen ? "delay-200 h-0.5" : ""
+                }`}
+              ></span>
+            </span>
+          </span>
         </button>
+        {/* <!-- Hamburger Toggle BTN --> */}
       </nav>
 
       {/* Mobile Dropdown Menu with matching nav glass background */}
