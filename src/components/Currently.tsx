@@ -14,8 +14,7 @@ export function Currently() {
           (Arch + Hyprland) and running a small homelab —{" "}
           <strong className="font-semibold text-white">Pi-hole</strong> for DNS,{" "}
           <strong className="font-semibold text-white">Traefik</strong> as a reverse
-          proxy, <strong className="font-semibold text-white">WireGuard</strong> for
-          remote access, and an frp tunnel to a self-hosted Minecraft server.
+          proxy, and an frp tunnel to a self-hosted Minecraft server.
         </p>
       </div>
     </section>

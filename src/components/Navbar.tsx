@@ -37,6 +37,26 @@ export function Navbar() {
               GitHub
             </a>
           </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/musab-nizamani-1167a5261/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-inter text-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://x.com/MusabAhmedNiz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-inter text-nav-link text-on-surface-variant hover:text-primary transition-colors duration-200"
+            >
+              X
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
