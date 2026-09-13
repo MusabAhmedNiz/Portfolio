@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,21 +50,37 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile Menu Toggle Button */}
+        {/* Mobile Menu Toggle Button with animated div icon */}
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 -mr-2 text-on-surface-variant hover:text-on-surface focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg transition-colors"
+          className="md:hidden p-2 -mr-2 text-on-surface-variant hover:text-on-surface focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg transition-colors flex items-center justify-center"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
         >
-          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          <div className="w-5 h-4 relative flex flex-col justify-between" aria-hidden="true">
+            <div
+              className={`w-full h-[1.5px] bg-current rounded-full transition-all duration-300 ease-in-out origin-center ${
+                isOpen ? "translate-y-[7.25px] rotate-45" : "translate-y-0 rotate-0"
+              }`}
+            />
+            <div
+              className={`w-full h-[1.5px] bg-current rounded-full transition-all duration-200 ease-in-out ${
+                isOpen ? "opacity-0 scale-x-0" : "opacity-100 scale-x-100"
+              }`}
+            />
+            <div
+              className={`w-full h-[1.5px] bg-current rounded-full transition-all duration-300 ease-in-out origin-center ${
+                isOpen ? "-translate-y-[7.25px] -rotate-45" : "translate-y-0 rotate-0"
+              }`}
+            />
+          </div>
         </button>
       </nav>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Dropdown Menu with matching nav glass background */}
       {isOpen && (
-        <div className="md:hidden border-t border-[#1e293b]/50 bg-[#0a0a0f]/95 backdrop-blur-2xl px-5 py-5 shadow-2xl">
+        <div className="md:hidden border-t border-[#1e293b]/50 backdrop-blur-xl bg-[#0a0a0f]/85 px-5 py-5 transition-all duration-300 ease-in-out">
           <ul className="flex flex-col gap-4 max-w-[800px] mx-auto">
             {navLinks.map((link) => (
               <li key={link.label}>
