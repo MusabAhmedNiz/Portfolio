@@ -52,39 +52,44 @@ export function Navbar() {
 
         {/* <!-- Hamburger Toggle BTN --> */}
         <button
+          type="button"
           aria-label="hamburger Toggler"
-          className="block md:hidden p-1 -mr-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+          aria-expanded={isOpen}
+          className="block md:hidden p-2 -mr-2 text-on-surface-variant hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span className="relative block h-5 w-5 cursor-pointer">
-            <span className="absolute block h-full w-full">
+            {/* Layer 1: 3 horizontal bars */}
+            <span className="absolute inset-0 block">
               <span
-                className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-white delay-[0] duration-200 ease-in-out ${
-                  !isOpen ? "!w-full delay-300" : ""
+                className={`absolute left-0 top-1 block h-[1px] rounded-full bg-white transition-all duration-200 ease-in-out ${
+                  isOpen ? "w-0 delay-[0ms]" : "w-full delay-200"
                 }`}
-              ></span>
+              />
               <span
-                className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-white delay-150 duration-200 ease-in-out ${
-                  !isOpen ? "delay-400 !w-full" : ""
+                className={`absolute left-0 top-[9.5px] block h-[1px] rounded-full bg-white transition-all duration-200 ease-in-out ${
+                  isOpen ? "w-0 delay-[75ms]" : "w-full delay-300"
                 }`}
-              ></span>
+              />
               <span
-                className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-white delay-200 duration-200 ease-in-out ${
-                  !isOpen ? "!w-full delay-500" : ""
+                className={`absolute left-0 bottom-1 block h-[1px] rounded-full bg-white transition-all duration-200 ease-in-out ${
+                  isOpen ? "w-0 delay-[150ms]" : "w-full delay-[400ms]"
                 }`}
-              ></span>
+              />
             </span>
-            <span className="absolute block h-full w-full rotate-45">
+
+            {/* Layer 2: Rotated 45deg crossbars forming the X */}
+            <span className="absolute inset-0 block rotate-45">
               <span
-                className={`absolute left-2.5 top-0 block h-0 w-0.5 rounded-sm bg-white delay-300 duration-200 ease-in-out ${
-                  isOpen ? "h-full delay-[0]" : ""
+                className={`absolute left-[9.5px] top-0 block w-[1px] rounded-full bg-white transition-all duration-200 ease-in-out ${
+                  isOpen ? "h-full delay-200" : "h-0 delay-[0ms]"
                 }`}
-              ></span>
+              />
               <span
-                className={`delay-400 absolute left-[1px] top-[9px] block h-0 w-full rounded-sm bg-white duration-200 ease-in-out ${
-                  isOpen ? "delay-200 h-0.5" : ""
+                className={`absolute left-0 top-[9.5px] block h-[1px] rounded-full bg-white transition-all duration-200 ease-in-out ${
+                  isOpen ? "w-full delay-200" : "w-0 delay-[0ms]"
                 }`}
-              ></span>
+              />
             </span>
           </span>
         </button>
