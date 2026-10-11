@@ -29,6 +29,20 @@ pnpm install
 pnpm dev
 ```
 
+## SEO and icons
+
+The canonical URL, page title, description, and profile links live in
+[`src/data/site.ts`](./src/data/site.ts). Update the URL there if the site moves
+to a custom domain.
+
+The app includes a favicon, SVG icon, Apple touch icon, Open Graph image,
+Twitter card metadata, profile structured data, `robots.txt`, and `sitemap.xml`.
+The SVG is the source for the raster icons. The sitemap lists the homepage;
+section anchors are part of that page.
+
+After deploying, submit `https://musabniz.vercel.app/sitemap.xml` in Google Search
+Console and inspect the homepage to request indexing.
+
 ## Version history
 
 | Version | Date       | Notes                                                                    |

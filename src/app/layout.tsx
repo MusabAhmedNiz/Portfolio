@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Rubik } from "next/font/google";
+import { site } from "@/data/site";
 import "./globals.css";
 
 const rubik = Rubik({
@@ -17,9 +18,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MusabNiz - Full Stack Developer",
-  description:
-    "Portfolio of Musab — full-stack developer building web apps with Next.js, React, and TypeScript. Auth, payments, file uploads, and a homelab on the side.",
+  metadataBase: new URL(site.url),
+  title: site.title,
+  description: site.description,
+  authors: [{ name: site.name, url: site.url }],
+  alternates: {
+    canonical: site.url,
+  },
+  openGraph: {
+    type: "website",
+    url: site.url,
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@MusabAhmedNiz",
+    title: site.title,
+    description: site.description,
+    images: [{ url: "/opengraph-image", alt: site.title }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
